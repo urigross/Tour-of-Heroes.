@@ -58,6 +58,13 @@ getHeroes(): Observable<Hero[]> {
     )
   }
 
+  add(hero: Hero): Observable<Hero>{
+    return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
+      tap((newHero: Hero)=> this._log(`added hero w/ id=${newHero.id}`)),
+      catchError(this._handleError<Hero>('addHero'))
+    )
+  }
+
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type':'application/json'})
   };
