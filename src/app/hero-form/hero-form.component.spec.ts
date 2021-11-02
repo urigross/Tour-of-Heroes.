@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroFormComponentComponent } from './hero-form-component.component';
+import { HeroFormComponent } from './hero-form.component';
 
-describe('HeroFormComponentComponent', () => {
-  let component: HeroFormComponentComponent;
-  let fixture: ComponentFixture<HeroFormComponentComponent>;
+describe('HeroFormComponent', () => {
+  let component: HeroFormComponent;
+  let fixture: ComponentFixture<HeroFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeroFormComponentComponent ]
+      declarations: [ HeroFormComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeroFormComponentComponent);
+    fixture = TestBed.createComponent(HeroFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
