@@ -19,5 +19,8 @@ export class HeroFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  newHero():void{
+    this.model = new Hero(42,'','');
+  }
 
 }
